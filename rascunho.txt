@@ -1,0 +1,133 @@
+Baixar nodeJS e instalar
+
+criar um pasta <nome>
+
+iniciar o cmd ou powershell
+
+Iniciar o npm, gerenciador de pastas do nodeJS
+
+->npm init
+npm install
+
+Instalar express framework para munipulação arquivos do servidor
+
+->npm install express -save
+
+Instalar o ejs para manipular o html com a extenção .ejs
+
+->npm install ejs --save
+
+Instalar nodemon utilizado para alterar um arquivo e não precisar reiniciar o servidor
+
+->npm install -g nodemon
+->nodemon app.js <ou nome do arquivo>
+
+Instalar MySql
+->npm install mysql --save
+
+Ligar o servidor
+
+->nodemon app.js
+
+Instalar consign minizador de arquivos
+
+->npm install consign --save
+
+Instalar Body parser, para utilizar forms no node
+
+->npm install body-parser --save
+
+Instalar express validator, para validar os forms do sistema
+
+->npm install express-validator --save
+
+
+Revisão Node.js
+
+1- criar um diretório
+2- iniciar o npm -> gerenciador de pastas
+3- express -> framework para desenvolvimento web
+4- ejs -> igne de views
+5- consign -> auto loader
+6- body-parser -> que contém as variáveis de formulário que popula a body
+7- express-validator -> valida as informações do formulário
+
+Socket.io
+
+on('nome', function(data){})
+Fica ouvindo pedidos de execução
+
+emit('nome'{})
+Pedido para executar alguma ação
+
+/* Mongo DB */
+
+->Instalar o software
+->criar uma pasta data no dir c:\
+->ir ate o exe mongod.exe
+->ir ate o exe mongo.exe
+
+cmds
+
+show dbs; -> exibe os bancos
+use curso_mongodb; -> cria parcialmente o banco;
+db.alunos.save({Nome: "Fernando"}); -> cria o banco
+db.dropDatabase(); -> exclui o banco
+db.createCollection("alunos")-> cria uma collection
+db.getCollectionNames()-> mostra as collection existentes no banco
+db.cursos.drop()-> exclui a collection
+db.alunos.save({})->savar um documento
+db.alunos.findOne()->mostra o primeiro dado da table
+db.alunos.find()->mostra todos dos dados da table
+db.alunos.find().pretty()->mostra todos dos dados da table com leitura amigável
+db.alunos.find({nome:{$eq:"José"}}) -> função basica para consulta
+
+operadores logicos
+
+= -> $eq
+> -> $gt
+>= -> $gte
+< -> $lt
+<= -> $ltr
+!= \ <> -> $ne
+
+db.alunos.find({sexo:{$eq:'F'}, idade:{$gt:30}}).pretty() -> comparação and
+db.alunos.find({ $or:[ {nome:{$eq:'Maria'}}, {nome:{$eq:'Jose'}} ] }).pretty() -> comparação com or
+
+
+função update()
+db.alunos.update(
+{
+	nome:'Jose'
+},
+{
+	$set:
+		{nome: 'João', idade:26}
+})
+db.alunos.update(
+{
+	sexo:'F'
+},
+{
+	$set:
+		{sexo: 'Feminino'}
+},
+{
+	multi:true
+}
+)
+
+função remove()
+
+db.alunos.remove(
+{
+	matricula: {$eq:'absd'}
+})
+
+npm install express-session --save -> para criar variaveis de sessão
+
+
+
+
+
+
